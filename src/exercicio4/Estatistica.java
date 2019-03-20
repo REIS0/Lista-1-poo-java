@@ -29,7 +29,7 @@ public class Estatistica {
 	}
 	
 	public void imprimir() {
-		for (int contador = 0; contador < maiorValor; contador++) {
+		for (int contador = 0; contador <= maiorValor; contador++) {
 			if (contador%2 == 0) {
 				System.out.println(contador + " e par");
 			}

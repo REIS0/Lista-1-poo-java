@@ -3,21 +3,21 @@ package exercicio5;
 public class ComparadorDeStrings {
 
 	public boolean compararStrings(String string1, String string2) {
-		String reverse1;
-		String reverse2;
-		for (int i = string1.length(); i >= 0; i--) {
-			reverse1 += string1.charAt(i);
-		}
-		for (int i = string2.length(); i >= 0; i--) {
-			reverse2 += string2.charAt(i);
-		}
 		
-		if (string1 == reverse2 || string2 == reverse1) {
+		if (string1.length() == string2.length()) {
+			int count = string2.length() - 1;
+			for (int i = 0; i < string1.length(); i++) {
+				if (string1.charAt(i) != string2.charAt(count)) {
+					return false;
+				}
+				count--;
+			}
 			return true;
 		}
 		else {
 			return false;
 		}
+
 	}
 	
 }

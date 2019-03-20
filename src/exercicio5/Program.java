@@ -14,8 +14,6 @@ public class Program {
 		System.out.print("segunda palavra: ");
 		String string2 = input.nextLine();
 		
-		System.out.println(comparador.compararStrings(string1, string2));
-		
 		if (comparador.compararStrings(string1, string2) == true) {
 			System.out.println("reverso");
 		}
