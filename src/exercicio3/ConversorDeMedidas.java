@@ -1,12 +1,14 @@
 package exercicio3;
 
+import java.util.Objects;
+
 public class ConversorDeMedidas {
 
 	public String converterMassa(Medidas medidas1, Medidas medidas2) {
-		if (medidas1.getUnidadeDeMassa() == "kg" && medidas2.getUnidadeDeMassa() == "lb") {
+		if (Objects.equals(medidas1.getUnidadeDeMassa(), "kg") && Objects.equals(medidas2.getUnidadeDeMassa(), "lb")) {
 			return ((medidas1.getMassa()*2.2046) + " lb");
 		}
-		else if (medidas1.getUnidadeDeMassa() == "lb" && medidas2.getUnidadeDeMassa() == "kg") {
+		else if (Objects.equals(medidas1.getUnidadeDeMassa(), "lb") && Objects.equals(medidas2.getUnidadeDeMassa(), "kg")) {
 			return ((medidas1.getMassa()/2.2046) + " kg");
 		}
 		else {
@@ -15,10 +17,10 @@ public class ConversorDeMedidas {
 	}
 	
 	public String converterTemperatura(Medidas medidas1, Medidas medidas2) {
-		if (medidas1.getUnidadeDeTemperatura() == "C" && medidas2.getUnidadeDeTemperatura() == "F") {
+		if (Objects.equals(medidas1.getUnidadeDeDistancia(), "C") && Objects.equals(medidas2.getUnidadeDeTemperatura(), "F")) {
 			return ((medidas1.getTemperatura()*1.8+32) + " F");
 		}
-		else if (medidas2.getUnidadeDeTemperatura() == "F" && medidas2.getUnidadeDeTemperatura() == "C") {
+		else if (Objects.equals(medidas1.getUnidadeDeDistancia(), "F") && Objects.equals(medidas2.getUnidadeDeTemperatura(), "C")) {
 			return (((medidas1.getTemperatura()+32)/1.8) + " C");
 		}
 		else {
@@ -27,11 +29,11 @@ public class ConversorDeMedidas {
 	}
 	
 	public String converterDistancia(Medidas medidas1, Medidas medidas2) {
-		if (medidas1.getUnidadeDeDistancia() == "m" && medidas2.getUnidadeDeDistancia() == "mi") {
-			return ((medidas1.getDistancia()/1609.344) + " mi");
+		if (Objects.equals(medidas1.getUnidadeDeDistancia(), "km") && Objects.equals(medidas2.getUnidadeDeDistancia(), "mi")) {
+			return ((medidas1.getDistancia()/1.609) + " mi");
 		}
-		else if (medidas1.getUnidadeDeDistancia() == "mi" && medidas2.getUnidadeDeDistancia() == "m") {
-			return ((medidas1.getDistancia()*1609.344) + " m");
+		else if (Objects.equals(medidas1.getUnidadeDeDistancia(), "mi") && Objects.equals(medidas2.getUnidadeDeDistancia(), "km")) {
+			return ((medidas1.getDistancia()*1.609) + " km");
 		}
 		else {
 			return "nao e possivel, medidas iguais";

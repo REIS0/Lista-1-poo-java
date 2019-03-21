@@ -1,5 +1,7 @@
 package exercicio3;
 
+import java.util.Objects;
+
 public class Medidas {
 
 	private String unidadeDeDistancia;
@@ -14,13 +16,13 @@ public class Medidas {
 	}
 	
 	public Medidas(String unidadeDeDistancia, double distancia, String unidadeDeMassa, double massa, String unidadeDeTemperatura, int temperatura) {
-		if (unidadeDeDistancia == "m" || unidadeDeDistancia == "mi") {
+		if (Objects.equals(unidadeDeDistancia, "km") || Objects.equals(unidadeDeDistancia, "mi")) {
 			this.setUnidadeDeDistancia(unidadeDeDistancia);
 		}
-		if (unidadeDeMassa == "kg" || unidadeDeMassa == "lb") {
+		if (Objects.equals(unidadeDeMassa, "kg") || Objects.equals(unidadeDeMassa, "lb")) {
 			this.setUnidadeDeMassa(unidadeDeMassa);
 		}
-		if (unidadeDeTemperatura == "C" || unidadeDeTemperatura == "F") {
+		if (Objects.equals(unidadeDeTemperatura, "C") || Objects.equals(unidadeDeTemperatura, "F")) {
 			this.setUnidadeDeTemperatura(unidadeDeTemperatura);
 		}
 		this.setDistancia(distancia);

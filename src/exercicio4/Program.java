@@ -12,7 +12,7 @@ public class Program {
 		Estatistica estatistica = new Estatistica(input.nextInt());
 		
 		System.out.println("somatorio[s] media[m] imprimir[i]");
-		System.out.print("escolha opção: ");
+		System.out.print("escolha opcao: ");
 		char escolha = input.next().charAt(0);
 		
 		if (escolha == 's') {
