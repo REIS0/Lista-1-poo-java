@@ -28,6 +28,17 @@ public class Estatistica {
 		return soma/maiorValor;
 	}
 	
+	public double variancia() {
+		double variancia = 0;
+		int count = 0;
+		for (int i = 0; i <= this.maiorValor; i++) {
+			variancia += Math.pow((i - this.media()), 2);
+			count++;
+		}
+		variancia = variancia / count;
+		return variancia;
+	}
+	
 	public void imprimir() {
 		for (int contador = 0; contador <= maiorValor; contador++) {
 			if (contador%2 == 0) {

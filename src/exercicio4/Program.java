@@ -21,6 +21,9 @@ public class Program {
 		if (escolha == 'm') {
 			System.out.println("media: " + estatistica.media());
 		}
+		if (escolha == 'v') {
+			System.out.println("variancia: " + estatistica.variancia());
+		}
 		if (escolha == 'i') {
 			estatistica.imprimir();
 		}
