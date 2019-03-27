@@ -21,10 +21,10 @@ public class Estatistica {
 	public double media() {
 		int contador = 0;
 		int soma = maiorValor;
-		while (contador < maiorValor) {
-			soma += maiorValor;
+		do {
+			soma += this.maiorValor;
 			contador++;
-		}
+		} while (contador < maiorValor);
 		return soma/maiorValor;
 	}
 	

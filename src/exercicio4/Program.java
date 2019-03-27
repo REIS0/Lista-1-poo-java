@@ -18,13 +18,13 @@ public class Program {
 		if (escolha == 's') {
 			System.out.println("somatorio: " + estatistica.somatorio());
 		}
-		if (escolha == 'm') {
+		else if (escolha == 'm') {
 			System.out.println("media: " + estatistica.media());
 		}
-		if (escolha == 'v') {
+		else if (escolha == 'v') {
 			System.out.println("variancia: " + estatistica.variancia());
 		}
-		if (escolha == 'i') {
+		else if (escolha == 'i') {
 			estatistica.imprimir();
 		}
 		else {
