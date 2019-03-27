@@ -22,7 +22,7 @@ public class Estatistica {
 		int contador = 0;
 		int soma = maiorValor;
 		do {
-			soma += this.maiorValor;
+			soma += contador;
 			contador++;
 		} while (contador < maiorValor);
 		return soma/maiorValor;
@@ -30,12 +30,10 @@ public class Estatistica {
 	
 	public double variancia() {
 		double variancia = 0;
-		int count = 0;
 		for (int i = 0; i <= this.maiorValor; i++) {
 			variancia += Math.pow((i - this.media()), 2);
-			count++;
 		}
-		variancia = variancia / count;
+		variancia = variancia / this.maiorValor;
 		return variancia;
 	}
 	
